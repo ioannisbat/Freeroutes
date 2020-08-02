@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="rounded.png"/>
+  <title>Freeroutes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" style="margin-bottom: 0;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Freeroutes</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a href="#">Events</a></li>
+          <li><a href="partnerslist.html">Partners</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" data-toggle="modal" data-target="#parthnersignup"><span class="glyphicon glyphicon-briefcase"></span> Partner Sign Up</a></li>
+          <li><a href="" data-toggle="modal" data-target="#usersignup"><span class="glyphicon glyphicon-user"></span> User Sign Up</a></li>
+          <li><a href="" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="login" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Login</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="logmail">Email:</label>
+          <input type="text" class="form-control" id="logmail">
+        </div>
+        <div class="form-group">
+          <label for="logpwd">Password:</label>
+          <input type="password" class="form-control" id="logpwd">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="partner.html" class="btn btn-warning" role="button">Partner Login</a>
+      <a href="user.html" class="btn btn-success" role="button">User Login</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="modal fade" id="usersignup" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">User Sign Up</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+          <label for="cpwd">Επιβεβαίωση password:</label>
+          <input type="password" class="form-control" id="cpwd">
+        </div>
+        <div class="form-group">
+          <label for="fname">Όνομα:</label>
+          <input type="text" class="form-control" id="fname">
+        </div>
+        <div class="form-group">
+          <label for="lname">Επώνυμο:</label>
+          <input type="text" class="form-control" id="lname">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="user.html" class="btn btn-success" role="button">Sign up</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="modal fade" id="parthnersignup" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Partner Sign Up</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="pmail">Email Οργανισμού:</label>
+          <input type="text" class="form-control" id="pmail">
+        </div>
+        <div class="form-group">
+          <label for="ppwd">Password:</label>
+          <input type="password" class="form-control" id="ppwd">
+        </div>
+        <div class="form-group">
+          <label for="pcpwd">Επιβεβαίωση password:</label>
+          <input type="password" class="form-control" id="pcpwd">
+        </div>
+        <div class="form-group">
+          <label for="cfname">Όνομα Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="cfname">
+        </div>
+        <div class="form-group">
+          <label for="clname">Επίθετο Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="clname">
+        </div>
+        <div class="form-group">
+          <label for="phone">Τηλέφωνο Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="type">Δραστηρότητα οργανισμού:</label>
+          <select class="form-control" id="type">
+            <option>Διάφορα</option>
+            <option>Ποδηλασία</option>
+            <option>Τρέξιμο</option>
+            <option>Οριβασία</option>
+            <option>Roller skating</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Πόλη:</label>
+          <input type="text" class="form-control" id="city">
+        </div>
+        <div class="form-group">
+          <label>Οδός:</label>
+          <input type="text" class="form-control" id="street">
+        </div>
+        <div class="form-group">
+          <label for="zip">ΤΚ:</label>
+          <input type="text" class="form-control" id="zip">
+        </div>
+        <div class="form-group">
+          <label>Περιγραφή οργανισμού:</label>
+          <textarea class="form-control" rows="5" id="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fb">Facebook Page:</label>
+          <input type="text" class="form-control" id="fb">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="partner.html" class="btn btn-success" role="button">Sign up</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="container">
+    <br>
+    <h1>Όλα τα events<span class="pull-right"><a href="add.html" class="btn btn-warning" role="button">Δημιουργία event</a></span></h1>
+    <br>
+	 <br>
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning">Ταξινόμηση κατά:</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Είδος <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Τρέξιμο</a></li>
+          <li><a href="#">Ποδηλασία</a></li>
+          <li><a href="#">Οριβασία</a></li>
+          <li><a href="#">Roller skating</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Ημερομηνία <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Κοντινότερο</a></li>
+          <li><a href="#">Μακρινότερο</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="row text-center">
+      <div class="col-md-6">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">10K Marathon Run: 22/11</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/wind.jpg" alt="Freeday Photo" style="width:550px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">FlyDay: 5/12</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/rolling.jpg" alt="FlyDay Photo" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">NightoutRun: 7/12</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/running.jpg" alt="Running" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">CityCycle: 14/1</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/cycling.jpg" alt="FlyDay Photo" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">SunnyDay: 14/1</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/sunny.jpg" alt="FlyDay Photo" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">HikingDay: 20/4</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/hiking.jpg" alt="FlyDay Photo" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <div class="image-rounded" style="position: relative;">
+          <h2 style="position: absolute; right: 0; width: 100%;">
+          <span class="Span1">Freeday: 3/12</span>
+          </h2>
+          <a href="fullevent.html">
+            <img class="img-responsive img-rounded center-block" src="../images/scycling.jpg" alt="Freeday Photo" style="width:300px;height:200px">
+          </a>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+ <br>  
+<br>  
+<br>    
+<br>  <!-- footer -->
+	<footer class="navbar-inverse">
+		<div class="container">
+			<div class="row">             
+				<div class="col-xs-12">
+					<p class="text-center">&copy; 2016 - Freeroutes</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+
+</body>
+
+</html>

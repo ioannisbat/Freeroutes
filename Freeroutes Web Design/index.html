@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="rounded.png"/>
+  <title>Freeroutes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" style="margin-bottom: 0;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Freeroutes</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="html/events.html">Events</a></li>
+          <li><a href="html/partnerslist.html">Partners</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" data-toggle="modal" data-target="#parthnersignup"><span class="glyphicon glyphicon-briefcase"></span> Partner Sign Up</a></li>
+          <li><a href="" data-toggle="modal" data-target="#usersignup"><span class="glyphicon glyphicon-user"></span> User Sign Up</a></li>
+          <li><a href="" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="login" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Login</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="logmail">Email:</label>
+          <input type="text" class="form-control" id="logmail">
+        </div>
+        <div class="form-group">
+          <label for="logpwd">Password:</label>
+          <input type="password" class="form-control" id="logpwd">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="html/partner.html" class="btn btn-warning" role="button">Partner Login</a>
+      <a href="html/user.html" class="btn btn-success" role="button">User Login</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="modal fade" id="usersignup" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">User Sign Up</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+          <label for="cpwd">Επιβεβαίωση password:</label>
+          <input type="password" class="form-control" id="cpwd">
+        </div>
+        <div class="form-group">
+          <label for="fname">Όνομα:</label>
+          <input type="text" class="form-control" id="fname">
+        </div>
+        <div class="form-group">
+          <label for="lname">Επώνυμο:</label>
+          <input type="text" class="form-control" id="lname">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="html/user.html" class="btn btn-success" role="button">Sign up</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="modal fade" id="parthnersignup" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Partner Sign Up</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="pmail">Email Οργανισμού:</label>
+          <input type="text" class="form-control" id="pmail">
+        </div>
+        <div class="form-group">
+          <label for="ppwd">Password:</label>
+          <input type="password" class="form-control" id="ppwd">
+        </div>
+        <div class="form-group">
+          <label for="pcpwd">Επιβεβαίωση password:</label>
+          <input type="password" class="form-control" id="pcpwd">
+        </div>
+        <div class="form-group">
+          <label for="cfname">Όνομα Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="cfname">
+        </div>
+        <div class="form-group">
+          <label for="clname">Επίθετο Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="clname">
+        </div>
+        <div class="form-group">
+          <label for="phone">Τηλέφωνο Υπεύθυνου:</label>
+          <input type="text" class="form-control" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="type">Δραστηρότητα οργανισμού:</label>
+          <select class="form-control" id="type">
+            <option>Διάφορα</option>
+            <option>Ποδηλασία</option>
+            <option>Τρέξιμο</option>
+            <option>Οριβασία</option>
+            <option>Roller skating</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Πόλη:</label>
+          <input type="text" class="form-control" id="city">
+        </div>
+        <div class="form-group">
+          <label>Οδός:</label>
+          <input type="text" class="form-control" id="street">
+        </div>
+        <div class="form-group">
+          <label for="zip">ΤΚ:</label>
+          <input type="text" class="form-control" id="zip">
+        </div>
+        <div class="form-group">
+          <label>Περιγραφή οργανισμού:</label>
+          <textarea class="form-control" rows="5" id="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fb">Facebook Page:</label>
+          <input type="text" class="form-control" id="fb">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="html/partner.html" class="btn btn-success" role="button">Sign up</a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <img src="images/logo.png" class="img-responsive img-rounded center-block" alt="FlyDay Photo" style="width:700px;height:100px">
+    <br>
+    <br>
+    <h2 class="text-center">Δήλωσε συμμετοχή στα σημαντικότερα events μαζικού αθλητισμού και κέρδισε προσφορές!</h2>
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="thumbnail">
+              <div class="row">
+                <br>
+                <div class="col-md-4 text-center">
+                  <div class="image-rounded" style="position: relative;">
+                    <h2 style="position: absolute; right: 0; width: 100%;">
+                    <span class="Span1">
+                    Freeday: 3/12
+                    </span>
+                    </h2>
+                      <img class="img-responsive img-rounded" src="images/scycling.jpg" alt="Freeday Photo" style="width:300px;height:200px">
+                  </div>
+                  <br>
+                </div>
+                <div class="col-md-8">
+                  <p>
+                    <b>Ημερομηνία:</b> 3/12/2016
+                    <br>
+                    <b>Ώρα συγκέντρωσης:</b> 21:15<br>
+                  </p>
+                  <p>
+                    <b>Διαδρομή:</b> ΟΑΚΑ - Φιλοθέη - Αγ. Παρασκευή - Πεντάγωνο - Νέο Ψυχικό - Παλαιό Ψυχικό - ΟΑΚΑ <b>[Εύκολη]</b><br>
+                    <b>Σημείο εκκίνησης:</b> Αψίδα στο ΟΑΚΑ<br>
+                  </p>
+                  <p>
+                    <b>Σχόλια διαδρομής:</b> Φιλοθέη (you know what i mean), Μεσογείων (λεωφορειολωρίδα), Ψυχικό (πλατειούλες) και ένα πέρασμα από το Πεντάγωνο...<br>
+                  </p>
+                  <h4><span class="label label-warning">Έπαθλο συμμετοχής:</span> 30 πόντοι</h4>
+                </div>
+              <br>
+              </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="thumbnail">
+              <div class="row">
+                <br>
+                <div class="col-md-4 text-center">
+                  <div class="image-rounded" style="position: relative;">
+                    <h2 style="position: absolute; right: 0; width: 100%;">
+                    <span class="Span1">
+                    10K Marathon Run: 22/11
+                    </span>
+                    </h2>
+                      <img class="img-responsive img-rounded" src="images/wind.jpg" alt="Freeday Photo" style="width:300px;height:200px">
+                  </div>
+                  <br>
+                </div>
+                <div class="col-md-8">
+                  <p>
+                    <b>Ημερομηνία:</b> 22/11/2016
+                    <br>
+                    <b>Ώρα συγκέντρωσης:</b> 08:30<br>
+                  </p>
+                  <p>
+                    <b>Διαδρομή:</b> Μαραθώνας-Αθήνα<b> [Δύσκολη]</b><br>
+                    <b>Σημείο εκκίνησης:</b> Μαραθώνας<br>
+                  </p>
+                  <p>
+                    <b>Σχόλια διαδρομής:</b> Μεταξύ του Μαραθώνα και της Αθήνας υπάρχει η Πεντέλη,
+                    έτσι αυτό σημαίνει ότι, εάν ο Φειδιππίδης έκανε πραγματικά το διάσημο τρέξιμό του
+                    μετά από τη μάχη, έπρεπε να τρέξει γύρω από το βουνό. <br>
+                  </p>
+                  <h4><span class="label label-warning">Έπαθλο συμμετοχής:</span> 100 πόντοι</h4>
+                </div>
+              <br>
+              </div>
+          </div>
+        </div>
+      </div>
+      <span class="pull-right">
+        <a href="html/events.html" class="btn btn-warning" role="button">Περισσότερα &#10095;</a>
+      </span>
+    </div>
+  </div>
+  <br>
+
+  <div class="container-fluid" style="background-color:#f0ad4e; color:white;">
+    <br>
+    <h1 class="text-center">Τι είναι το Freeroutes;</h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-3 text-center">
+          <img src="images/road.png" class="img-rounded" alt="Freeday Photo" style="width:200px;height:200px">
+      </div>
+      <div class="col-sm-9">
+        <br>
+        <p>
+        To <b>Freeroutes</b> είναι μία ηλεκτρονική πλατφόρμα η οποία πληροφορεί τους χρήστες για τη πλειοψηφία
+        μαζικών αθλητικών εκδηλώσεων (τρεξίματος, ποδηλάτου, ορειβασίας, rollers κτλ).
+      </p>
+      <br>
+      <h3>Το όραμα μας</h3>
+      <p>
+        Το όραμα μας είναι να αποτελούμε την πρώτη σκέψη στο μυαλό των ανθρώπων που ασχολούνται και αγαπούν τον αθλητισμό
+        και ενδιαφέρονται να βρουν και να συμμετάσχουν στις προσεχείς διαδρομές πάνω στο άθλημα που τους ενδιαφέρει.
+      </p>
+      <br>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+<br>
+<br>
+<br>  <!-- footer -->
+	<footer class="navbar-inverse">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="text-center">&copy; 2016 - Freeroutes</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+</body>
+</body>
+
+</html>

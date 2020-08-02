@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="rounded.png"/>
+  <title>Freeroutes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" style="margin-bottom: 0;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Freeroutes</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="partnerslist.html">Partners</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="partner.html"><span class="glyphicon glyphicon-briefcase"></span> Freeday</a></li>
+          <li><a href="../index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+      <h1>Δημιουργία event:</h1>
+      <p>Εισάγετε και επεξεργαστείτε τη φωτογραφία του event</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+          100%
+        </div>
+      </div>
+
+    <img src="../images/scycling.jpg" class="img-responsive img-rounded center-block" alt="Insert Photo" width="350" height="350">
+    <br>
+    <button type="button" class="btn btn-warning center-block">Insert image</button>
+
+    <ul class="pager">
+      <li class="previous"><a href="add.html">Previous</a></li>
+      <li class="btn btn-success pull-right" data-toggle="modal" data-target="#myModal">Δημιουργία</li>
+    </ul>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="newevents.html" class="close" role="button">&times;</a>
+          <h4 class="modal-title">Επιτυχημένη δημιουργία</h4>
+        </div>
+        <div class="modal-body">
+          <img src="../images/happy.jpg" class="img-responsive center-block" alt="Success" width="150" height="150">
+          <br>
+          <h4>Το url του event: <a href="http://ism.dmst.aueb.gr/ismgroup3/html/fullevent.html">http://ism.dmst.aueb.gr/ismgroup3/html/fullevent.html</a></h4>
+          <br>
+          <h4>Κοινοποίηση: <img src="../images/social.png" class="img-responsive" alt="Social Media" width="150" height="150"> </h4>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+  
+
+</body>
+
+</html>
